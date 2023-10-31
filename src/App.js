@@ -34,5 +34,11 @@ export default function FeedbackForm() {
       </button>
       {isSending && <p>Sending...</p>}
     </form>
-  )
+  );
+}
+
+function sendMessage(text) {
+  return new Promise(resolve => {
+    setTimeout(resolve, 3000);
+  });
 }
