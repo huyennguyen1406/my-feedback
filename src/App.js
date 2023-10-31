@@ -7,7 +7,14 @@ export default function FeedbackForm() {
 
   async function handleSumit(e) {
     e.preventDefault();
-    
+    setIsSending(true);
+    await sendMessage(text);
+    setIsSending(false);
+    setIsSent(true);
+  }
+
+  if (isSent) {
+    return <h1>Thanks for feedback!</h1>
   }
 
   return (
